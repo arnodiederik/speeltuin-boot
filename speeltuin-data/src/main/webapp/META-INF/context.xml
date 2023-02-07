@@ -1,0 +1,3 @@
+<Context>
+    <Parameter name="spring.application.name" value="speeltuin-data"/>
+</Context>
