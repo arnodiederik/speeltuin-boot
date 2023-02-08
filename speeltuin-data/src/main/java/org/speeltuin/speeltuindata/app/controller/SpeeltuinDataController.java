@@ -2,9 +2,12 @@ package org.speeltuin.speeltuindata.app.controller;
 
 import io.swagger.annotations.*;
 import org.speeltuin.speeltuindata.app.config.SwaggerConfig;
+import org.speeltuin.speeltuindata.app.entity.Person;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = {"data"})
 @Validated
@@ -20,8 +23,7 @@ public interface SpeeltuinDataController {
     })
     List<Person> getData(
             @ApiParam(value = "", example = "") @RequestParam(required = false) String owner,
-            @ApiParam(value = "", example = "") @RequestParam(required = false) String name,
-            InputSortingAndPagingParams inputSortingAndPagingParams
+            @ApiParam(value = "", example = "") @RequestParam(required = false) String name
     );
 
     @ApiOperation(value = "")
